@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="303,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="178" Text="User name"/>
+        <TextBlock HorizontalAlignment="Left" Margin="303,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="205" Text="User name"/>
         <TextBlock HorizontalAlignment="Left" Margin="303,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="178" Text="password"/>
         <Button Content="Button" HorizontalAlignment="Left" Margin="303,238,0,0" VerticalAlignment="Top" Width="143" Height="23"/>
 
