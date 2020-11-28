@@ -3,13 +3,35 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:Beeps"
         mc:Ignorable="d"
-        Title="Login" Height="450" Width="800">
+        Title="Login" Height="580" Width="450" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Background="#FF6E29B6">
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="303,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="205" Text="User name"/>
-        <TextBlock HorizontalAlignment="Left" Margin="303,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="178" Text="password"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="303,238,0,0" VerticalAlignment="Top" Width="143" Height="23"/>
+        <StackPanel Margin="40 10 40 10">
+            <Image Source="/Assets/loginLogo.png" Width="200" Height="200"/>
+            <Border Background="White" Margin="10 20" CornerRadius="15">
+                <StackPanel Margin="5">                   
+                    <TextBox Margin="10" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="User Name" />                                       
+                </StackPanel>
+            </Border>
+            <Border Background="White" Margin="10 2" CornerRadius="15">
+                <StackPanel Margin="5">
+                    <TextBox Margin="10" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Password" />
+                </StackPanel>
+            </Border>
+            <Border Margin="10 30" CornerRadius="15">
+                <StackPanel Margin="10" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Margin="15 10" Height="50" Width="150" Content="Cancel"/>
+                    <Button Margin="15 10" Height="50" Width="150" Content="Login"/>                    
+                </StackPanel>
 
+            </Border>
+            <Grid>
+                <materialDesign:Badged HorizontalAlignment="Center">
+                    <TextBlock Style="{StaticResource MaterialDesignButtonTextBlock}">Medical Equipment planning system</TextBlock>
+                </materialDesign:Badged>
+            </Grid>
+        </StackPanel>
     </Grid>
 </Window>
