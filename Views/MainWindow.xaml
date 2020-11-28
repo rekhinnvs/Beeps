@@ -22,7 +22,7 @@
             </Border>
             <Border Margin="10 30" CornerRadius="15">
                 <StackPanel Margin="10" Orientation="Horizontal" HorizontalAlignment="Center">
-                    <Button Margin="15 10" Height="50" Width="150" Content="Cancel"/>
+                    <Button Margin="15 10" Height="50" Width="150" Content="Cancel" Click="Button_Click"/>
                     <Button Margin="15 10" Height="50" Width="150" Content="Login"/>                    
                 </StackPanel>
 
