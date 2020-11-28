@@ -2,9 +2,13 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Beeps"
+<<<<<<< HEAD
              
-             StartupUri="Views/AdnimHome.xaml">
+             StartupUri="Views/AdminHome.xaml">
 
+=======
+             StartupUri="Views/AdminHome.xaml">
+>>>>>>> f59ead9eaaf8c6f000e1c75196865ea66cfd9ee6
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
