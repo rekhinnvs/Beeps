@@ -8,18 +8,35 @@
         Title="AdminHomePage" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="27*"/>
-            <ColumnDefinition Width="24*"/>
-            <ColumnDefinition Width="311*"/>
-            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="54*"/>
+            <ColumnDefinition Width="669*"/>
+            <ColumnDefinition Width="70*"/>
         </Grid.ColumnDefinitions>
-        <Button Content="New Tender" Grid.Column="1" HorizontalAlignment="Left" Margin="10.4,35,0,0" VerticalAlignment="Top" Width="156" Height="79" Grid.ColumnSpan="2"/>
-        <Button Content="View Tender" Grid.Column="2" HorizontalAlignment="Left" Margin="203.431,35,0,0" VerticalAlignment="Top" Width="157" Height="79"/>
-        <Button Content="Repare Request" Grid.Column="2" HorizontalAlignment="Left" Margin="450.431,35,0,0" VerticalAlignment="Top" Width="161" Height="79"/>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="27.4,195,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="27.4,238,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="27.4,288,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.628,3.782" Grid.ColumnSpan="2"/>
-        <DatePicker Grid.Column="1" HorizontalAlignment="Left" Margin="27.4,334,0,0" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
+        <ToggleButton  x:Name="btnFirst" Content="New Tender" HorizontalAlignment="Left" Margin="0,14,0,0" VerticalAlignment="Top" Width="188" Height="36" Grid.Column="1"/>
+        <Button Content="View Tender" Grid.Column="1" HorizontalAlignment="Left" Margin="254,10,0,0" VerticalAlignment="Top" Width="169" Height="40"/>
+        <Button Content="Repare Request" Grid.Column="1" HorizontalAlignment="Left" Margin="488,11,0,0" VerticalAlignment="Top" Width="171" Height="39"/>
+        <Grid x:Name="cover" Margin="38,-1,443.333,9.667" Grid.ColumnSpan="2">
+
+
+            <Grid.Style>
+                <Style TargetType="Grid">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding IsChecked,ElementName=btnFirst}" Value="True">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Grid.Style>
+
+            <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="27,161,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="174"/>
+            <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="27,205,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="174"/>
+            <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="27,253,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="174" RenderTransformOrigin="0.628,3.782"/>
+            <DatePicker Grid.Column="1" HorizontalAlignment="Left" Margin="27,298,0,0" VerticalAlignment="Top" Width="174"/>
+            <Button Content="Submit" Grid.Column="1" HorizontalAlignment="Left" Margin="27,375,0,0" VerticalAlignment="Top" Width="75"/>
+            <Button Content="Cancel" Grid.Column="1" HorizontalAlignment="Left" Margin="126,375,0,0" VerticalAlignment="Top" Width="75"/>
+
+        </Grid>
 
     </Grid>
 </Window>
