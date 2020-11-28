@@ -1,0 +1,24 @@
+﻿<Window x:Class="Beeps.Views.AdminHome"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Beeps"
+        mc:Ignorable="d"
+        Title="AdminHomePage" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="54*"/>
+            <ColumnDefinition Width="669*"/>
+            <ColumnDefinition Width="70*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="New Tender" Grid.Column="1" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="156" Height="79"/>
+        <Button Content="View Tender" Grid.Column="1" HorizontalAlignment="Left" Margin="251,35,0,0" VerticalAlignment="Top" Width="157" Height="79"/>
+        <Button Content="Repare Request" Grid.Column="1" HorizontalAlignment="Left" Margin="498,35,0,0" VerticalAlignment="Top" Width="161" Height="79"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="27,195,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="27,238,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="27,288,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.628,3.782"/>
+        <DatePicker Grid.Column="1" HorizontalAlignment="Left" Margin="27,334,0,0" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>
