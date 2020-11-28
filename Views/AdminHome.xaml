@@ -8,17 +8,18 @@
         Title="AdminHomePage" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="54*"/>
-            <ColumnDefinition Width="669*"/>
-            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition Width="24*"/>
+            <ColumnDefinition Width="311*"/>
+            <ColumnDefinition Width="35*"/>
         </Grid.ColumnDefinitions>
-        <Button Content="New Tender" Grid.Column="1" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="156" Height="79"/>
-        <Button Content="View Tender" Grid.Column="1" HorizontalAlignment="Left" Margin="251,35,0,0" VerticalAlignment="Top" Width="157" Height="79"/>
-        <Button Content="Repare Request" Grid.Column="1" HorizontalAlignment="Left" Margin="498,35,0,0" VerticalAlignment="Top" Width="161" Height="79"/>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="27,195,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="27,238,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="27,288,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.628,3.782"/>
-        <DatePicker Grid.Column="1" HorizontalAlignment="Left" Margin="27,334,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="New Tender" Grid.Column="1" HorizontalAlignment="Left" Margin="10.4,35,0,0" VerticalAlignment="Top" Width="156" Height="79" Grid.ColumnSpan="2"/>
+        <Button Content="View Tender" Grid.Column="2" HorizontalAlignment="Left" Margin="203.431,35,0,0" VerticalAlignment="Top" Width="157" Height="79"/>
+        <Button Content="Repare Request" Grid.Column="2" HorizontalAlignment="Left" Margin="450.431,35,0,0" VerticalAlignment="Top" Width="161" Height="79"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="27.4,195,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="27.4,238,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="27.4,288,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.628,3.782" Grid.ColumnSpan="2"/>
+        <DatePicker Grid.Column="1" HorizontalAlignment="Left" Margin="27.4,334,0,0" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Window>
