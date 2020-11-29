@@ -3,19 +3,30 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:Beeps"
         mc:Ignorable="d"
         Title="AdminHomePage" Height="500" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
 
     <Grid>
 
-        <Canvas Background="AliceBlue" Margin="27,27,23.6,65.4"/>
+        <Canvas Name="newTenderCanvas" Background="AliceBlue" Margin="27,27,23.6,65.4">
+            <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Product Name" Canvas.Left="23" Canvas.Top="38" Height="45" Width="285" />
+            <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Department" Canvas.Left="23" Canvas.Top="128" Height="45" Width="285" />
+            <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Maximum amount" Canvas.Left="23" Canvas.Top="233" Height="45" Width="285" />
+            <DatePicker Style="{StaticResource MaterialDesignDatePicker}" materialDesign:HintAssist.Hint="Due date" Canvas.Left="372" Canvas.Top="39" Width="337" Height="46"/>
+
+
+            <Button  Width="150" Content="Submit"  Canvas.Left="559" Canvas.Top="247" Height="45"/>
+            <Button  Height="45" Width="150" Content="Cancel" Canvas.Left="372" Canvas.Top="247"/>
+
+        </Canvas>
         <UniformGrid DockPanel.Dock="Bottom" Margin="5" Rows="1" HorizontalAlignment="Center"
             VerticalAlignment="Bottom">
 
-            <Button Grid.Column="0" Content="New Tender" Margin="5" Padding="50,3 "/>
-            <Button Grid.Column="1" Content="View Tender" Margin="5" Padding="6,3"/>
-            <Button Grid.Column="2" Content="Repair Requeste" Margin="5" Padding="6,3"/>
+            <Button Grid.Column="0" Content="New Tender" Margin="5" Padding="50,3 " Height="46"/>
+            <Button Grid.Column="1" Content="View Tender" Margin="5" Padding="6,3" Height="44"/>
+            <Button Grid.Column="2" Content="Repair Requeste" Margin="5" Padding="6,3" Height="44"/>
 
         </UniformGrid>
 
