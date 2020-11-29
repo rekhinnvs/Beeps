@@ -5,15 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Beeps.Views"
         mc:Ignorable="d"
-        Title="ProductHomePage" Height="450" Width="800">
+        Title="ProductHomePage" Height="500" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
 
     <Grid>
-        
-        
-    <UniformGrid DockPanel.Dock="Bottom" Margin="5" Rows="1" HorizontalAlignment="Center"
+
+        <Canvas x:Name="EquipmentViewTenderCanvas" Background="AliceBlue" Margin="27,27,23.6,65.4" d:IsHidden="True"/>
+        <Canvas Name="EquipmentRepairRequests" Background="AliceBlue" Margin="27,27,23.6,65.4"/>
+
+        <UniformGrid Margin="118,0,118.6,5.4" DockPanel.Dock="Bottom" Rows="1" HorizontalAlignment="Center"
             VerticalAlignment="Bottom">
-            <Button Grid.Column="0" Content="View Available Tenders" Margin="5" Padding="50,3 "/>
-            <Button Grid.Column="1" Content="My Equipments" Margin="5" Padding="6,3"/>
+            <Button Grid.Column="0" Content="View Available Tenders" Margin="5" Padding="50,3" Height="44"/>
+            <Button Grid.Column="1" Content="My Equipments" Margin="5" Padding="6,3" Height="44"/>
         </UniformGrid>
     </Grid>
 

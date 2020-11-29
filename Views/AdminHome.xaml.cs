@@ -27,12 +27,11 @@ namespace Beeps.Views
         private void btnFirst_Click(object sender, RoutedEventArgs e)
         {
            
-            /**if(newTender.Visibility ==Visibility.Collapsed)
-            {
-                newTender.Visibility = Visibility.Visible;
-            }
-            else
-                newTender.Visibility = Visibility.Collapsed; **/
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

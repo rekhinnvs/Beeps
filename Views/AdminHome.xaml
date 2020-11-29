@@ -9,8 +9,11 @@
         Title="AdminHomePage" Height="500" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
 
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
 
-        <Canvas Name="newTenderCanvas" Background="AliceBlue" Margin="27,27,23.6,65.4">
+        <Canvas Name="newTenderCanvas" Background="AliceBlue" Margin="27,27,23.6,65.4" d:IsHidden="True">
             <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Product Name" Canvas.Left="23" Canvas.Top="38" Height="45" Width="285" />
             <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Department" Canvas.Left="23" Canvas.Top="128" Height="45" Width="285" />
             <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Maximum amount" Canvas.Left="23" Canvas.Top="233" Height="45" Width="285" />
@@ -21,14 +24,19 @@
             <Button  Height="45" Width="150" Content="Cancel" Canvas.Left="372" Canvas.Top="247"/>
 
         </Canvas>
-        <UniformGrid DockPanel.Dock="Bottom" Margin="5" Rows="1" HorizontalAlignment="Center"
+
+        <Canvas x:Name="viewTenderCanvas" Background="AliceBlue" Margin="27,27,23.6,65.4" d:IsHidden="True"/>
+        <Canvas Name="repairRequests" Background="AliceBlue" Margin="27,27,23.6,65.4"/>
+
+        <UniformGrid Margin="118,0,118.6,5.4" Rows="1" HorizontalAlignment="Center"
             VerticalAlignment="Bottom">
 
-            <Button Grid.Column="0" Content="New Tender" Margin="5" Padding="50,3 " Height="46"/>
+            <Button Grid.Column="0" Content="New Tender" Margin="5" Padding="50,3 " Height="46" Click="Button_Click"/>
             <Button Grid.Column="1" Content="View Tender" Margin="5" Padding="6,3" Height="44"/>
             <Button Grid.Column="2" Content="Repair Requeste" Margin="5" Padding="6,3" Height="44"/>
 
         </UniformGrid>
+
 
     </Grid>
 </Window>
