@@ -8,14 +8,8 @@
         Title="AdminHomePage" Height="500" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
 
     <Grid>
-        <!--<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="30" Margin="82,10,194.6,430.4" Width="637" >
-            <Button  x:Name="btnFirst" Margin="0 0 120 0" Content="New Tender" Click="btnFirst_Click"/>
-            <Button Content="View Tender" Margin="0,0,60,0"/>
-            <Button Content="Repare Request" Margin="100,0,0,0" />
 
-        </StackPanel> -->
-
-
+        <Canvas Background="AliceBlue" Margin="27,27,23.6,65.4"/>
         <UniformGrid DockPanel.Dock="Bottom" Margin="5" Rows="1" HorizontalAlignment="Center"
             VerticalAlignment="Bottom">
 
