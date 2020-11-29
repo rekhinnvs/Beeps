@@ -5,38 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Beeps"
         mc:Ignorable="d"
-        Title="AdminHomePage" Height="450" Width="800">
+        Title="AdminHomePage" Height="500" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="54*"/>
-            <ColumnDefinition Width="669*"/>
-            <ColumnDefinition Width="70*"/>
-        </Grid.ColumnDefinitions>
-        <ToggleButton  x:Name="btnFirst" Content="New Tender" HorizontalAlignment="Left" Margin="0,14,0,0" VerticalAlignment="Top" Width="188" Height="36" Grid.Column="1"/>
-        <Button Content="View Tender" Grid.Column="1" HorizontalAlignment="Left" Margin="254,10,0,0" VerticalAlignment="Top" Width="169" Height="40"/>
-        <Button Content="Repare Request" Grid.Column="1" HorizontalAlignment="Left" Margin="488,11,0,0" VerticalAlignment="Top" Width="171" Height="39"/>
-        <Grid x:Name="cover" Margin="38,-1,443.333,9.667" Grid.ColumnSpan="2">
+        <!--<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="30" Margin="82,10,194.6,430.4" Width="637" >
+            <Button  x:Name="btnFirst" Margin="0 0 120 0" Content="New Tender" Click="btnFirst_Click"/>
+            <Button Content="View Tender" Margin="0,0,60,0"/>
+            <Button Content="Repare Request" Margin="100,0,0,0" />
+
+        </StackPanel> -->
 
 
-            <Grid.Style>
-                <Style TargetType="Grid">
-                    <Setter Property="Visibility" Value="Collapsed"/>
-                    <Style.Triggers>
-                        <DataTrigger Binding="{Binding IsChecked,ElementName=btnFirst}" Value="True">
-                            <Setter Property="Visibility" Value="Visible"/>
-                        </DataTrigger>
-                    </Style.Triggers>
-                </Style>
-            </Grid.Style>
+        <UniformGrid DockPanel.Dock="Bottom" Margin="5" Rows="1" HorizontalAlignment="Center"
+            VerticalAlignment="Bottom">
 
-            <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="27,161,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="174"/>
-            <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="27,205,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="174"/>
-            <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="27,253,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="174" RenderTransformOrigin="0.628,3.782"/>
-            <DatePicker Grid.Column="1" HorizontalAlignment="Left" Margin="27,298,0,0" VerticalAlignment="Top" Width="174"/>
-            <Button Content="Submit" Grid.Column="1" HorizontalAlignment="Left" Margin="27,375,0,0" VerticalAlignment="Top" Width="75"/>
-            <Button Content="Cancel" Grid.Column="1" HorizontalAlignment="Left" Margin="126,375,0,0" VerticalAlignment="Top" Width="75"/>
+            <Button Grid.Column="0" Content="New Tender" Margin="5" Padding="50,3 "/>
+            <Button Grid.Column="1" Content="View Tender" Margin="5" Padding="6,3"/>
+            <Button Grid.Column="2" Content="Repair Requeste" Margin="5" Padding="6,3"/>
 
-        </Grid>
+        </UniformGrid>
 
     </Grid>
 </Window>

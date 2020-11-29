@@ -6,14 +6,15 @@
         xmlns:local="clr-namespace:Beeps.Views"
         mc:Ignorable="d"
         Title="ProductHomePage" Height="450" Width="800">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="37*"/>
-            <ColumnDefinition Width="718*"/>
-            <ColumnDefinition Width="38*"/>
-        </Grid.ColumnDefinitions>
-        <Button Content="View Available Tenders" HorizontalAlignment="Left" Margin="37,19,0,0" VerticalAlignment="Top" Width="337" Height="37" Grid.ColumnSpan="2"/>
-        <Button Content="My Equipments" HorizontalAlignment="Left" Margin="371.667,19,0,0" VerticalAlignment="Top" Width="336" Height="37" Grid.Column="1"/>
 
+    <Grid>
+        
+        
+    <UniformGrid DockPanel.Dock="Bottom" Margin="5" Rows="1" HorizontalAlignment="Center"
+            VerticalAlignment="Bottom">
+            <Button Grid.Column="0" Content="View Available Tenders" Margin="5" Padding="50,3 "/>
+            <Button Grid.Column="1" Content="My Equipments" Margin="5" Padding="6,3"/>
+        </UniformGrid>
     </Grid>
+
 </Window>

@@ -23,5 +23,16 @@ namespace Beeps.Views
         {
             InitializeComponent();
         }
+
+        private void btnFirst_Click(object sender, RoutedEventArgs e)
+        {
+           
+            /**if(newTender.Visibility ==Visibility.Collapsed)
+            {
+                newTender.Visibility = Visibility.Visible;
+            }
+            else
+                newTender.Visibility = Visibility.Collapsed; **/
+        }
     }
 }
