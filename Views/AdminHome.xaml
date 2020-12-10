@@ -6,6 +6,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:Beeps"
         mc:Ignorable="d"
+        Name="AdminWindow"
         Title="AdminHomePage" Height="500" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
 
     <Grid>
@@ -13,7 +14,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <Canvas Name="newTenderCanvas" Background="AliceBlue" Margin="27,27,23.6,65.4" d:IsHidden="True">
+        <Canvas Name="newTenderCanvas" Background="AliceBlue" Margin="27,27,23.6,65.4">
             <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Product Name" Canvas.Left="23" Canvas.Top="38" Height="45" Width="285" />
             <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Department" Canvas.Left="23" Canvas.Top="128" Height="45" Width="285" />
             <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Maximum amount" Canvas.Left="23" Canvas.Top="233" Height="45" Width="285" />
@@ -26,7 +27,7 @@
         </Canvas>
 
         <Canvas x:Name="viewTenderCanvas" Background="AliceBlue" Margin="27,27,23.6,65.4" d:IsHidden="True"/>
-        <Canvas Name="repairRequests" Background="AliceBlue" Margin="27,27,23.6,65.4"/>
+        <Canvas Name="repairRequests" Background="AliceBlue" Margin="27,27,23.6,65.4" d:IsHidden="True"/>
 
         <UniformGrid Margin="118,0,118.6,5.4" Rows="1" HorizontalAlignment="Center"
             VerticalAlignment="Bottom">

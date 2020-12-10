@@ -19,19 +19,32 @@ namespace Beeps.Views
     /// </summary>
     public partial class AdminHome : Window
     {
+
         public AdminHome()
         {
             InitializeComponent();
+            newTenderCanvas.Visibility = Visibility.Collapsed;
+            viewTenderCanvas.Visibility = Visibility.Collapsed;
+            repairRequests.Visibility = Visibility.Collapsed;
+
         }
 
-        private void btnFirst_Click(object sender, RoutedEventArgs e)
+        public void OnWindowLoaded(object sender, RoutedEventArgs e)
+
+    {
+
+            //MessageBox.Show("hellow world");
+
+    }
+
+    private void btnFirst_Click(object sender, RoutedEventArgs e)
         {
            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            newTenderCanvas.Visibility = Visibility.Visible;
         }
     }
 }
