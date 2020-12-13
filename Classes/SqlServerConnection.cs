@@ -58,7 +58,7 @@ namespace Beeps.Classes
             catch (Exception e)
             {
 
-                throw;
+                throw e;
             }
         }
     }

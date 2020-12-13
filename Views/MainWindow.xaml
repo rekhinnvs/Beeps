@@ -19,7 +19,7 @@
             </Border>
             <Border Background="White" Margin="10 2" CornerRadius="15">
                 <StackPanel Margin="5">
-                    <TextBox Margin="10" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Password" Name="txtPassword"/>
+                    <PasswordBox Margin="10" Style="{StaticResource MaterialDesignFilledPasswordFieldPasswordBox}" materialDesign:HintAssist.Hint="Password" Name="txtPassword"/>
                 </StackPanel>
             </Border>
             <Border Margin="10 30" CornerRadius="15">

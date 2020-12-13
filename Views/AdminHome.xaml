@@ -14,27 +14,29 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <Canvas Name="newTenderCanvas" Background="AliceBlue" Margin="27,27,23.6,65.4">
-            <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Product Name" Canvas.Left="23" Canvas.Top="38" Height="45" Width="285" />
-            <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Department" Canvas.Left="23" Canvas.Top="128" Height="45" Width="285" />
-            <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Maximum amount" Canvas.Left="23" Canvas.Top="233" Height="45" Width="285" />
-            <DatePicker Style="{StaticResource MaterialDesignDatePicker}" materialDesign:HintAssist.Hint="Due date" Canvas.Left="372" Canvas.Top="39" Width="337" Height="46"/>
+        <Canvas Name="newTenderCanvas" Background="AliceBlue" Margin="27,27,23.6,65.4" RenderTransformOrigin="0.051,0.881">
+            <TextBox x:Name="txtProductName" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Product Name" Canvas.Left="23" Canvas.Top="38" Height="45" Width="285" />
+            <TextBox x:Name="txtDepartment" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Department" Canvas.Left="23" Canvas.Top="128" Height="45" Width="285" />
+            <TextBox x:Name="txtMaxAmount" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Maximum amount" Canvas.Left="23" Canvas.Top="233" Height="45" Width="285" />
+            <DatePicker x:Name="datePicker" Style="{StaticResource MaterialDesignDatePicker}" materialDesign:HintAssist.Hint="Due date" Canvas.Left="372" Canvas.Top="39" Width="337" Height="46"/>
+            <Label x:Name="lblInfo" Content="" Canvas.Left="23" Canvas.Top="324" Width="455" FontSize="16"/>
 
-
-            <Button  Width="150" Content="Submit"  Canvas.Left="559" Canvas.Top="247" Height="45"/>
-            <Button  Height="45" Width="150" Content="Cancel" Canvas.Left="372" Canvas.Top="247"/>
+            <Button Name="BtnSubmit"  Width="150" Content="Submit"  Canvas.Left="559" Canvas.Top="247" Height="45" Click="BtnSubmit_Click"/>
+            <Button x:Name="BtnCancel"  Height="45" Width="150" Content="Clear" Canvas.Left="372" Canvas.Top="247" Click="BtnCancel_Click"/>
 
         </Canvas>
 
-        <Canvas x:Name="viewTenderCanvas" Background="AliceBlue" Margin="27,27,23.6,65.4" d:IsHidden="True"/>
-        <Canvas Name="repairRequests" Background="AliceBlue" Margin="27,27,23.6,65.4" d:IsHidden="True"/>
+        <Canvas x:Name="viewTenderCanvas" Background="AliceBlue" Margin="27,27,23.6,65.4" d:IsHidden="True">
+            <DataGrid Name="viewTenderDataGrid" Grid.Row="1" AutoGenerateColumns="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="378" Width="743"/>
+        </Canvas>
+        <Canvas Name="repairCanvas" Background="AliceBlue" Margin="27,27,23.6,65.4" d:IsHidden="True"/>
 
         <UniformGrid Margin="118,0,118.6,5.4" Rows="1" HorizontalAlignment="Center"
             VerticalAlignment="Bottom">
 
-            <Button Grid.Column="0" Content="New Tender" Margin="5" Padding="50,3 " Height="46" Click="Button_Click"/>
-            <Button Grid.Column="1" Content="View Tender" Margin="5" Padding="6,3" Height="44"/>
-            <Button Grid.Column="2" Content="Repair Requeste" Margin="5" Padding="6,3" Height="44"/>
+            <Button Grid.Column="0" Name="BtnNewTender" Content="New Tender" Margin="5" Padding="50,3 " Height="46" Click="BtnNewTender_Click"/>
+            <Button Grid.Column="1" Name="BtnViewTender" Content="View Tender" Margin="5" Padding="6,3" Height="44" Click="BtnViewTender_Click"/>
+            <Button Grid.Column="2" Name="BtnRepair" Content="Repair Requeste" Margin="5" Padding="6,3" Height="44" Click="BtnRepair_Click"/>
 
         </UniformGrid>
 

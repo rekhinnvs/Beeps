@@ -1,18 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using Beeps.Classes;
 using System.Data;
 
@@ -33,14 +20,11 @@ namespace Beeps.Views
         private void BtnLoginClick(object sender, RoutedEventArgs e)
         {
             DBClass.OpenConnection();
-            DBClass.sql = $"SELECT COUNT(1) FROM Users WHERE Username= '{txtUserName.Text}' AND Password= '{txtPassword.Text}'";
+            DBClass.sql = $"SELECT COUNT(1) FROM Users WHERE Username= '{txtUserName.Text}' AND Password= '{txtPassword.Password}'";
 
             //DBClass.sql = "SELECT COUNT(1) FROM Users WHERE Username='@userName' AND Password= '@userName'";
             DBClass.cmd.CommandType = CommandType.Text;
             DBClass.cmd.CommandText = DBClass.sql;
-            //DBClass.cmd.Parameters.AddWithValue("@userName", txtUserName.Text);
-           // DBClass.cmd.Parameters.AddWithValue("@passWord", txtPassword.Text);
-
 
             int count = Convert.ToInt32(DBClass.cmd.ExecuteScalar());
             
@@ -72,12 +56,14 @@ namespace Beeps.Views
                     if(admin)
                     {
                         AdminHome adminHome = new AdminHome();
+                        DBClass.CloseConnection();
                         adminHome.Show();
                         this.Close();
                     }
                     else
                     {
                         ProductHomePage productHome = new ProductHomePage();
+                        DBClass.CloseConnection();
                         productHome.Show();
                         this.Close();
 
@@ -87,9 +73,10 @@ namespace Beeps.Views
             else
             {
                 MessageBox.Show("User name or password is incorrect");
-                txtPassword.Text = "";
+                txtPassword.Password = "";
                 txtUserName.Text = "";
             }
+            
         }
 
         private void BtnCancelClick(object sender, RoutedEventArgs e)
